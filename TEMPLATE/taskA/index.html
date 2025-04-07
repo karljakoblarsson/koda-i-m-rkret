@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Task A - Code in the Dark</title>
+
+  <link href="style.css" rel="stylesheet" />
+</head>
+<body>
+  <header class="page-header">
+    <div>
+      <h1>Devies Blog</h1>
+      <img widht="200" height="200" class="logo" src="devies.png" alt="Devies logo">
+    </div>
+    <nav>
+      <a href="/posts">Posts</a>
+      <a href="/about">About</a>
+      <a href="/contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <article class="post">
+      <header class="post-header">
+        <h2>
+          Implementing a design system - Choosing a way forward
+        </h2>
+        <time class="post-time" datetime="2024-08-30T10:08:51+02:00">
+          August 30, 2024
+        </time>
+      </header>
+
+      <main class="post-content">
+        <p>
+          For the last year one of my main projects at work has been to lead the implementation of a design system, building it together with my team. It’s not a perfect implementation but I’m quite proud of what we have accomplished so far with limited resources. I’d like to share some of our insights and experiences, about specific decisions we’ve made and why.
+        </p>
+        <p>
+          Let’s begin with the needs expressed by the organization:
+        </p>
+        <p>
+          <em>
+            “We want a great, consistent experience for all of our users in every channel, mainly on the web.”
+          </em>
+        </p>
+        <p>
+          That sounds great! Let’s start to unpack what that means.
+        </p>
+
+        <h3 id="a-great-consistent-experience">“A great, consistent experience”</h3>
+        <p>This need comes from the current state of their channels and I know the situation is similar for many organizations. Their public website(s) and different web apps have all been implemented at different times, with different technologies and with different designers. At best they share logos, some colors and fonts but otherwise the websites and apps does not look and behave great or consistently. The solution? A design system with shared styles, components and guidelines. And lots of time and effort of course.</p>
+
+        <h2 id="in-every-channel-mainly-on-the-web">“in every channel, mainly on the web.”</h2>
+        <p>That’s a tall task considering the state of web development. We can’t pragmatically limit ourselves to one JavaScript framework and expect that to last. We should be able to use this design system on websites and apps built with different technologies.</p>
+
+        <h3 id="implement-it-using-only-one-framework">Implement it using only one framework</h3>
+        <p>Many organizations choose to build everything with one technology, the last few years it’s usually React. This can work great for smaller organizations but of course it comes with limitations and risks. We lock ourselves into one framework that may turn out to not work well for every use case, go obsolete or turn into a direction we don’t want to follow. The upsides are that it is easier and less time consuming, at least short/medium term. For us, this would mean we have to rewrite some big existing websites and apps into the same framework too which was not feasible.</p>
+        <h3 id="implement-it-with-pure-css">Implement it with pure CSS</h3>
+        <p>But what about skipping implementing it for a specific framework? Pure, modern CSS is very powerful. I’ve seen how a CSS implementation of a design system has used ARIA attributes etc in a clever way for their style selectors which kind of forces the user to write accessible code in order to access the right styling. We chose to not go this way because it would mean we can’t bake in accessibility to the same extent that we would like since we can’t package the html template itself. Also we can’t really handle components requiring some state.</p>
+
+
+
+
+
+      </main>
+    </article>
+  </main>
+</body>
+</html>
