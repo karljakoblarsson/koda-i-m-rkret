@@ -1,0 +1,68 @@
+body {
+  max-width: 60ch;
+  margin: 0 auto;
+}
+
+h1 {
+  font-weight: 200;
+}
+
+.logo {
+  width: 6em;
+  height: 6em;
+}
+
+header {
+  margin-top: 4em;
+}
+
+header > div {
+  display: flex;
+  flex-direction: row;
+  align-items: space-between;
+  justify-content: space-between;
+}
+
+header > h1 {
+  margin-inline: 2em;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+
+  color: var(--sandy_brown);
+
+  font-weight: 800;
+  text-decoration: underline;
+
+  margin-block: 1em;
+}
+
+main {
+  margin-block: 2em;
+}
+
+article > header {
+  margin: 0;
+}
+
+article h1 {
+  margin: 0.5em 0;
+}
+
+article > header > time {
+  color: var(--sandy_brown);
+  font-size: 0.75em;
+  font-weight: 800;
+}
+
+article em {
+  color: var(--jasmine);
+}
+
+
+
+
+
